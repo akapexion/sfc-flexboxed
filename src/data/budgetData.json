@@ -1,0 +1,258 @@
+{
+  "tickerTips": [
+    "Tip: Pay yourself first by setting aside 10-20% of any income or allowance immediately.",
+    "Smart Habit: Always buy or rent used textbooks to save up to 60% every semester.",
+    "Reality Check: Buying a $4 coffee daily costs over $120 a month! Make coffee at home.",
+    "Rule of Thumb: Follow the 50/30/20 rule to balance Needs, Wants, and Savings effortlessly.",
+    "Shopping Hack: Wait 48 hours before making non-essential impulse purchases."
+  ],
+  "basicConcepts": [
+    {
+      "id": "income",
+      "title": "1. Income (Money In)",
+      "iconName": "Wallet",
+      "description": "All money you receive during the month. For students, this includes monthly allowance, part-time jobs, scholarships, or freelance work.",
+      "example": "Example: $300 monthly allowance + $150 tutoring income = $450 Total Income."
+    },
+    {
+      "id": "fixed-expenses",
+      "title": "2. Fixed Expenses",
+      "iconName": "Home",
+      "description": "Regular expenses that stay the exact same amount every single month. They are predictable and essential.",
+      "example": "Example: Room rent ($150), Monthly bus pass ($40), Internet bill ($25)."
+    },
+    {
+      "id": "variable-expenses",
+      "title": "3. Variable Expenses",
+      "iconName": "TrendingUp",
+      "description": "Expenses that change from month to month based on your spending habits and choices.",
+      "example": "Example: Groceries ($80-$120), Snacks ($20), Printing/Stationery ($15)."
+    },
+    {
+      "id": "needs-wants",
+      "title": "4. Needs vs. Wants",
+      "iconName": "Scale",
+      "description": "Needs are essential items required to survive and study. Wants are non-essential items that add fun or convenience.",
+      "example": "Needs: Meal plan, textbooks. Wants: Gaming subscription, concert ticket."
+    },
+    {
+      "id": "savings",
+      "title": "5. Savings & Emergency Fund",
+      "iconName": "PiggyBank",
+      "description": "Money set aside for future goals (e.g. buying a laptop) or unexpected emergencies (e.g. phone repair).",
+      "example": "Goal: Save $20 each week = $80 saved per month!"
+    }
+  ],
+  "sampleStudentBudget": {
+    "totalIncome": 500,
+    "items": [
+      { "category": "Fixed Need", "description": "Hostel/Room Rent", "amount": 200 },
+      { "category": "Fixed Need", "description": "Transportation Pass", "amount": 40 },
+      { "category": "Variable Need", "description": "College Groceries & Food", "amount": 110 },
+      { "category": "Variable Need", "description": "Books & Study Supplies", "amount": 35 },
+      { "category": "Want", "description": "Weekend Hangouts & Snacks", "amount": 45 },
+      { "category": "Want", "description": "Music & Video Streaming", "amount": 15 },
+      { "category": "Savings", "description": "Emergency & Laptop Savings Goal", "amount": 55 }
+    ]
+  },
+  "quizQuestions": [
+    {
+      "id": 1,
+      "question": "Which of the following is considered a Fixed Expense for a college student?",
+      "options": [
+        "Buying extra snacks at night",
+        "Monthly room rent fee",
+        "Movie tickets with friends",
+        "Buying a new sweater"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct! Room rent is fixed because the cost remains identical every month."
+    },
+    {
+      "id": 2,
+      "question": "According to the 50-30-20 rule, what percentage of your income should go towards Savings?",
+      "options": ["10%", "20%", "30%", "50%"],
+      "correctIndex": 1,
+      "explanation": "Correct! 20% of income is recommended for building savings and emergency funds."
+    },
+    {
+      "id": 3,
+      "question": "If you purchase a $5 daily Boba tea, how much will you spend in a 30-day month?",
+      "options": ["$50", "$100", "$150", "$200"],
+      "correctIndex": 2,
+      "explanation": "Correct! $5 x 30 days = $150 per month on boba tea!"
+    },
+    {
+      "id": 4,
+      "question": "What is an Emergency Fund meant to cover?",
+      "options": [
+        "Buying video games on release day",
+        "Unplanned medical bills or urgent laptop repair",
+        "Going on a holiday trip",
+        "Upgrading to a new phone every year"
+      ],
+      "correctIndex": 1,
+      "explanation": "Correct! Emergency funds are set aside exclusively for unexpected urgent needs."
+    }
+  ],
+  "classificationItems": [
+    { "id": 1, "name": "College Course Textbooks", "iconName": "BookOpen", "category": "Need", "explanation": "Necessary for attending classes and completing mandatory course assignments." },
+    { "id": 2, "name": "Latest Gaming Console", "iconName": "Gamepad2", "category": "Want", "explanation": "Great entertainment, but non-essential for daily survival or study." },
+    { "id": 3, "name": "Monthly Public Transport Pass", "iconName": "Bus", "category": "Need", "explanation": "Essential transportation required to commute to college daily." },
+    { "id": 4, "name": "Gourmet Coffee & Boba Tea", "iconName": "Coffee", "category": "Want", "explanation": "A daily treat. Making tea or coffee at home is much cheaper." },
+    { "id": 5, "name": "Healthy Daily Meals", "iconName": "Utensils", "category": "Need", "explanation": "Basic nutrition is mandatory to stay healthy and focused while studying." },
+    { "id": 6, "name": "Multiple Streaming Subscriptions", "iconName": "Tv", "category": "Want", "explanation": "Optional entertainment. Keeping just one subscription saves money." },
+    { "id": 7, "name": "Prescription Medicine / Hygiene", "iconName": "Pill", "category": "Need", "explanation": "Crucial for personal wellness, health, and hygiene." },
+    { "id": 8, "name": "Designer Brand Sneakers", "iconName": "ShoppingBag", "category": "Want", "explanation": "Standard comfortable shoes are a need, but luxury brands are a want." }
+  ],
+  "moneyMistakesList": [
+    {
+      "id": "impulse",
+      "title": "1. Impulse Buying & Flash Sales",
+      "iconName": "ShoppingBag",
+      "studentScenario": "Rahul sees an online flash sale with 40% discount on a jacket he didn't plan to buy. He spends $60 from his grocery budget.",
+      "impact": "He runs out of grocery money by the 3rd week of the month.",
+      "correctiveAction": "Enforce the '48-Hour Rule'. Wait 2 full days before buying non-essential items to see if you still truly need them.",
+      "category": "Spending Habits"
+    },
+    {
+      "id": "subscriptions",
+      "title": "2. Unused & Forgotten Subscriptions",
+      "iconName": "CreditCard",
+      "studentScenario": "Sara signed up for 4 free trials (streaming, music, gym, fitness app) and forgot to cancel before auto-renewal.",
+      "impact": "Loses $45 monthly without even using 3 of the services.",
+      "correctiveAction": "Set calendar reminders on the day you start any free trial to review and cancel if unnecessary.",
+      "category": "Subscriptions"
+    },
+    {
+      "id": "small-expenses",
+      "title": "3. Ignoring Small Daily Expenses ('The Latte Factor')",
+      "iconName": "Coffee",
+      "studentScenario": "Alex buys a $4 snack and $3 energy drink every afternoon at the campus canteen without writing it down.",
+      "impact": "Adds up to $210 per month without Alex realizing where the money went.",
+      "correctiveAction": "Track every daily purchase in an expense planner, no matter how small.",
+      "category": "Tracking"
+    },
+    {
+      "id": "no-plan",
+      "title": "4. Spending First and Saving 'Whatever is Left'",
+      "iconName": "DollarSign",
+      "studentScenario": "Zain receives his monthly allowance, spends freely for 3 weeks, and finds $0 remaining to put into savings.",
+      "impact": "Zero progress on savings goals and stress when unexpected fees pop up.",
+      "correctiveAction": "Practice 'Pay Yourself First'. Put 20% straight into savings as soon as allowance arrives.",
+      "category": "Budgeting Strategy"
+    },
+    {
+      "id": "late-fees",
+      "title": "5. Paying Bills Late and Incurring Penalties",
+      "iconName": "Clock",
+      "studentScenario": "David forgets the deadline for his mobile postpaid bill and library fees.",
+      "impact": "Pays an extra $15 in late fee penalties every month.",
+      "correctiveAction": "Schedule automatic payment alerts or mark bill due dates on your phone calendar.",
+      "category": "Planning"
+    }
+  ],
+  "infographicsData": [
+    {
+      "id": 1,
+      "title": "The 50-30-20 Rule Explained",
+      "category": "Budgeting",
+      "caption": "Visual breakdown of monthly income allocation: 50% Needs, 30% Wants, and 20% Savings.",
+      "color": "#2563eb",
+      "details": [
+        "50% Needs: Housing, Groceries, Utilities, Transport, Tuition",
+        "30% Wants: Dining out, Movies, Hobbies, Shopping",
+        "20% Savings: Emergency fund, Debt repayment, Future goals"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Needs vs Wants Decision Matrix",
+      "category": "Spending",
+      "caption": "Flowchart guide to help students evaluate purchases before spending.",
+      "color": "#059669",
+      "details": [
+        "Step 1: Is this essential for survival or studies?",
+        "Step 2: Do I already own something similar?",
+        "Step 3: Can I delay this purchase by 30 days?"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Monthly Student Budget Cycle",
+      "category": "Budgeting",
+      "caption": "Four-step repeatable cycle to manage monthly student finances smoothly.",
+      "color": "#d97706",
+      "details": [
+        "1. Plan Income & Set Savings Goal at month start",
+        "2. Cover Fixed Essential Needs first",
+        "3. Track Daily Variable Expenses",
+        "4. Review & Adjust at month end"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "30-Day Savings Challenge",
+      "category": "Savings",
+      "caption": "Fun interactive daily challenge to save small loose change every day.",
+      "color": "#7c3aed",
+      "details": [
+        "Day 1: Save $1 | Day 10: Save $2",
+        "Day 20: Save $3 | Day 30: Save $4",
+        "Total Saved in 1 Month: Over $60 easily!"
+      ]
+    }
+  ],
+  "chatbotPrompts": [
+    "What is the 50-30-20 rule?",
+    "What is a need vs a want?",
+    "How much should a student save monthly?",
+    "How can I stop impulse buying?",
+    "How do I create a simple student budget?"
+  ],
+  "chatbotKnowledge": [
+    {
+      "keywords": ["50-30-20", "50 30 20", "rule", "split", "percentage"],
+      "response": "The 50-30-20 rule is a simple budgeting guideline! Divide your monthly allowance or income into:\n- 50% for Needs (rent, food, books, transport)\n- 30% for Wants (hobbies, outings, streaming)\n- 20% for Savings (emergency fund, goals)."
+    },
+    {
+      "keywords": ["need", "want", "difference", "classify"],
+      "response": "Needs are essential items required for survival and education (like meals, rent, textbooks, and health care). Wants are non-essential items that improve comfort or entertainment (like gaming consoles, luxury clothes, and daily cafe drinks)."
+    },
+    {
+      "keywords": ["save", "saving", "how much", "amount", "target"],
+      "response": "As a rule of thumb, try saving at least 15% to 20% of whatever income or allowance you receive. Even saving $1 to $2 a day builds financial discipline!"
+    },
+    {
+      "keywords": ["impulse", "stop buying", "control", "overspend", "overspending"],
+      "response": "To control impulse buying:\n1. Use the 48-Hour Rule before buying non-essentials.\n2. Delete saved credit card info from shopping apps.\n3. Make a shopping list before going to stores and stick strictly to it!"
+    },
+    {
+      "keywords": ["create", "budget", "start", "begin", "simple"],
+      "response": "Starting a budget is easy:\n1. Calculate your monthly income or allowance.\n2. Deduct your fixed needs (rent, bills, pass).\n3. Set aside your savings goal first.\n4. Allocate remaining funds for daily food and entertainment!"
+    },
+    {
+      "keywords": ["emergency", "fund", "urgent"],
+      "response": "An emergency fund is money kept strictly for unexpected urgent expenses (like laptop repairs, lost bus pass, or medical visits). Aim to keep around $50-$100 as a student safety net."
+    },
+    {
+      "keywords": ["hello", "hi", "hey", "greetings"],
+      "response": "Hello! 👋 I'm your BudgetBasics AI Assistant. Ask me anything about student budgeting, saving tips, 50-30-20 rules, or how to avoid money mistakes!"
+    }
+  ],
+  "chatbotFallback": "I'm your BudgetBasics learning assistant! I specialize in student financial education. Try asking me about '50-30-20 rule', 'Needs vs Wants', 'How to save money', or 'Impulse buying tips'.",
+  "contactFaqs": [
+    {
+      "q": "Is BudgetBasics completely free for students?",
+      "a": "Yes! BudgetBasics is a 100% free educational platform designed to build student financial awareness."
+    },
+    {
+      "q": "Are my budget entries stored on any remote server?",
+      "a": "No. All entries, goals, and calculations run completely client-side in your browser for privacy and demonstration."
+    },
+    {
+      "q": "Can I adjust the 50-30-20 budget ratio?",
+      "a": "Absolutely! The 50-30-20 rule is an educational baseline. Students with low expenses can save more, or adjust based on individual needs."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Hi, i have attached my project... add these things:
+
+1) Add a Slider in place of Hero Section from flickity...
+2) Improve Card hover animation, flip them, rest is fine...
+3) Add Hero banner on every page except Home(it will have a slider)
+4) Scroll to top button will be on bottom left, bot will be on right
+5) Dark/Light mode button should be in Navbar...
+6) Feedback & Contact must have separate pages & must not appear in a single page
+7) generate images for banners of all pages that you have to create, it will appear in background
+8) Also generate images for slider... must have 2 slides
+9) Infographics cards must have filters working, there must be images in cards
+10) remove dollar logic from expense-planner page, there must be Rupees
+
+Note: This must be in an humanized manner....
+
