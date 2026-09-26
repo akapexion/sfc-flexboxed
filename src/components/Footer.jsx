@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
-import siteLogo from "../assets/logo.png";
+import siteLogo from "../assets/logo2.png";
 
 const Footer = () => {
   const scrollToTop = () => {
