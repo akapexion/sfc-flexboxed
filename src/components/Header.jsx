@@ -14,7 +14,7 @@ import {
   MessageSquare
 } from "lucide-react";
 import budgetData from "../data/budgetData.json";
-import siteLogo from "../assets/logo.png";
+import siteLogo from "../assets/logo2.png";
 
 const navGroups = [
   {
@@ -173,7 +173,7 @@ const Header = () => {
 
       <div className="tips-ticker-bar">
         <div className="container ticker-container">
-          <span className="ticker-label">Smart Tip</span>
+          <span className="ticker-label">Tip</span>
 
           {/* yes, the actual marquee tag - deprecated but still works everywhere */}
           <marquee className="ticker-text" behavior="scroll" direction="left" scrollAmount="5">
@@ -221,26 +221,6 @@ const Header = () => {
                 </div>
               );
             })}
-
-            <div className="font-size-control" role="group" aria-label="Adjust text size">
-              <button
-                className="font-size-btn"
-                onClick={decreaseFont}
-                disabled={fontScale <= MIN_FONT_SCALE}
-                aria-label="Decrease text size"
-              >
-                A-
-              </button>
-              <span className="font-size-value">{fontScale}%</span>
-              <button
-                className="font-size-btn"
-                onClick={increaseFont}
-                disabled={fontScale >= MAX_FONT_SCALE}
-                aria-label="Increase text size"
-              >
-                A+
-              </button>
-            </div>
 
             <button
               className="theme-toggle-icon-btn"

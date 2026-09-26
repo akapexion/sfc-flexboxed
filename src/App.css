@@ -41,41 +41,47 @@
 }
 
 [data-theme="dark"] {
-  --bg-primary: #0b0a26;
-  --bg-card: #131238;
-  --bg-secondary: #1a194a;
+  --bg-primary: #0f172a;
+  --bg-card: #111c32;
+  --bg-secondary: #1e293b;
 
-  --text-main: #f8f9fa;
-  --text-muted: #cbd5e0;
-  --text-light: #a0aec0;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-light: #94a3b8;
 
-  --primary-color: #3d3aee;
-  --primary-hover: #5956ff;
-  --primary-light: #181654;
+  /* Primary Blue */
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: #172554;
 
-  --highlight-magenta: #e64a96;
-  --highlight-magenta-hover: #f065a8;
+  /* Secondary */
+  --highlight-magenta: #38bdf8;
+  --highlight-magenta-hover: #7dd3fc;
 
-  --secondary-color: #2cd5c4;
-  --secondary-hover: #53e2d3;
+  --secondary-color: #22c55e;
+  --secondary-hover: #4ade80;
 
-  --accent-color: #ebe338;
-  --accent-light: #423e08;
+  /* Accent */
+  --accent-color: #facc15;
+  --accent-light: #422006;
 
-  --success-color: #5ebb82;
-  --success-light: #203d2c;
+  /* Status */
+  --success-color: #4ade80;
+  --success-light: #14351f;
 
-  --warning-color: #e6a052;
-  --warning-light: #49351f;
+  --warning-color: #fbbf24;
+  --warning-light: #3b2a08;
 
-  --danger-color: #e47772;
-  --danger-light: #482a2a;
+  --danger-color: #f87171;
+  --danger-light: #3b1818;
 
-  --border-color: #2d2b69;
+  /* Borders */
+  --border-color: #334155;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.35);
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -688,9 +694,11 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   flex-wrap: wrap;
 }
 .tag-btn {
-  padding: 6px 14px;
+  padding: 8px 24px;
   cursor: pointer;
   transition: all 0.2s ease;
+  background: transparent;
+  border: 1px solid var(--highlight-magenta);
 }
 
 .tag-btn:hover {
@@ -699,9 +707,9 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 }
 
 .tag-btn.active {
-  background-color: var(--primary-color);
+  background-color: var(--highlight-magenta);
   color: #ffffff;
-  border-color: var(--primary-color);
+  /* border-color: var(--primary-color); */
 }
 
 .sort-group {
@@ -1176,6 +1184,10 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-muted);
+}
+
+.form-textarea {
+  resize: none;
 }
 
 .form-input,
@@ -2310,7 +2322,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 
 .badge-teal {
   background-color: #d9f5f0;
-  color: #0f9488;
+  color: #FFF;
 }
 
 .badge-rose {
@@ -3302,7 +3314,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 }
 
 .header-site-logo {
-  height: 48px;
+  height: 70px;
   width: auto;
   max-width: 220px;
   object-fit: contain;
