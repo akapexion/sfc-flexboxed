@@ -82,12 +82,18 @@ const FeedbackPage = () => {
 
   return (
     <>
+    {location.pathname == "/feedback" ?
+    (
       <PageHeroBanner
         title="Student Feedback"
         subtitle="We value your thoughts! Share your experience with BudgetBasics and help us continuously improve our educational tools."
         badge="Community Input"
         bgImage={feedbackBannerImg}
       />
+    )
+    :
+    ""
+  }
 
       <section id="feedback-page" className="module-section bg-light">
         <div className="container">

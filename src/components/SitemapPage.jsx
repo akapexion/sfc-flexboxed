@@ -1,118 +1,162 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Map, ArrowRight, Home, BookOpen, Calculator, BarChart2, Info, Mail, MessageSquare } from 'lucide-react';
-import PageHeroBanner from './PageHeroBanner';
-import sitemapBannerImg from '../assets/banner_sitemap.jpg';
+import {
+  Sparkles,
+  ArrowRight,
+  Calculator,
+  Target,
+  Wallet,
+  Gamepad2,
+  ShieldAlert,
+  Eye,
+  Image,
+  Bot,
+  Star
+} from 'lucide-react';
+
+const sections = [
+  {
+    title: 'Core Financial Calculators & Planners',
+    icon: Calculator,
+    modules: [
+      {
+        icon: Calculator,
+        badge: 'Fresh Module',
+        badgeClass: 'badge-blue',
+        title: '50-30-20 Budget Allocation Tool',
+        desc: 'Smartly distributes monthly allowance across essential needs, personal wants, and savings using flexible budgeting presets.',
+        path: '/50-30-20-rule'
+      },
+      {
+        icon: Target,
+        badge: 'Goal Planner',
+        badgeClass: 'badge-teal',
+        title: 'Savings Target Calculator',
+        desc: 'Breaks down your savings target into achievable daily and monthly milestones with an interactive progress tracker.',
+        path: '/savings-goals'
+      },
+      {
+        icon: Wallet,
+        badge: 'Expense Tracker',
+        badgeClass: 'badge-rose',
+        title: 'Personal Spending Planner',
+        desc: 'A lightweight expense workspace for recording purchases, assigning categories, monitoring limits, and tracking available funds.',
+        path: '/expense-planner'
+      }
+    ]
+  },
+  {
+    title: 'Gamified Decision Making',
+    icon: Gamepad2,
+    modules: [
+      {
+        icon: Gamepad2,
+        badge: 'Interactive Challenge',
+        badgeClass: 'badge-purple',
+        title: 'Needs vs Wants Challenge',
+        desc: 'Test your financial judgment through realistic student spending situations, instant feedback, streaks, and achievement badges.',
+        path: '/needs-wants'
+      },
+      {
+        icon: ShieldAlert,
+        badge: 'Financial Safety',
+        badgeClass: 'badge-orange',
+        title: 'Student Money Pitfalls',
+        desc: 'Explore practical guides to avoid subscription traps, BNPL risks, unnecessary spending, and weak emergency-fund habits.',
+        path: '/money-mistakes'
+      }
+    ]
+  },
+  {
+    title: 'Visual Knowledge & Communication',
+    icon: Eye,
+    modules: [
+      {
+        icon: Image,
+        badge: 'Visual Insights',
+        badgeClass: 'badge-teal',
+        title: 'Financial Insights Gallery',
+        desc: 'Explore visual explainers covering compound growth, cash-flow basics, spending behavior, and smart credit decisions.',
+        path: '/infographics'
+      },
+      {
+        icon: Bot,
+        badge: 'Smart Assistant',
+        badgeClass: 'badge-pink',
+        title: 'BudgetBae AI Money Guide',
+        desc: 'An interactive AI-style assistant that delivers quick answers and practical financial guidance through keyword-based conversations.',
+        path: '/chatbot'
+      },
+      {
+        icon: Star,
+        badge: 'User Reviews',
+        badgeClass: 'badge-green',
+        title: 'Feedback & Review Center',
+        desc: 'Collect and showcase user feedback through validated submissions, star-based ratings, instant notifications, and community reviews.',
+        path: '/feedback'
+      }
+    ]
+  }
+];
 
 const SitemapPage = () => {
   return (
-    <>
-      <PageHeroBanner
-        title="Website Sitemap"
-        subtitle="Complete information architecture and navigation map of BudgetBasics."
-        badge="Architecture"
-        bgImage={sitemapBannerImg}
-      />
+    <section className="sitemap-section-wrap">
+      <div className="container">
+        <div className="sitemap-page-header">
+          <span>
+            <Sparkles size={14} className="icon-inline" /> Structured App Architecture
+          </span>
 
-      <section className="module-section bg-light">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title"><Map size={26} className="icon-inline text-primary" /> BudgetBasics Sitemap</h2>
-            <p className="section-description">
-              Explore the complete structure of BudgetBasics. Click any page link below to navigate directly!
-            </p>
-          </div>
+          <h1 className="sitemap-title">Interactive SPA Sitemap</h1>
 
-          <div className="sitemap-tree">
-            <div className="sitemap-root-card border-only">
-              <h4><Home size={20} className="icon-inline text-primary" /> <Link to="/">Home Dashboard (/)</Link></h4>
-              <p>Welcome hero slider, live clock, visitor counter, tips ticker, quick search, and interactive module 3D flip cards.</p>
-            </div>
-
-            <div className="sitemap-branches-grid">
-              <div className="branch-card border-only">
-                <div className="branch-header"><BookOpen size={18} className="icon-inline" /> Educational Guides</div>
-                <ul className="branch-list">
-                  <li>
-                    <Link to="/basics">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Budgeting Basics</strong> (/basics) - Concepts & quiz
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/needs-wants">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Needs vs Wants</strong> (/needs-wants) - Classifier game & guide
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/money-mistakes">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Money Mistakes</strong> (/money-mistakes) - Pitfalls & solutions
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="branch-card border-only">
-                <div className="branch-header"><Calculator size={18} className="icon-inline" /> Interactive Calculators</div>
-                <ul className="branch-list">
-                  <li>
-                    <Link to="/50-30-20-rule">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>50-30-20 Rule</strong> (/50-30-20-rule) - Split estimator & stacked chart
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/savings-goals">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Savings Goals</strong> (/savings-goals) - Goal timeline in Pakistani Rupees (Rs.)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/expense-planner">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Expense Planner</strong> (/expense-planner) - Daily purchase log table in Rs.
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="branch-card border-only">
-                <div className="branch-header"><BarChart2 size={18} className="icon-inline" /> Visual Resources & AI</div>
-                <ul className="branch-list">
-                  <li>
-                    <Link to="/infographics">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>Infographics Gallery</strong> (/infographics) - Filterable visual graphics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/chatbot">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>AI Chatbot</strong> (/chatbot) - Smart student assistant
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="branch-card border-only">
-                <div className="branch-header"><Info size={18} className="icon-inline" /> Project & Contact</div>
-                <ul className="branch-list">
-                  <li>
-                    <Link to="/about">
-                      <ArrowRight size={14} className="icon-inline" /> <strong>About Us</strong> (/about) - Project theme & FAQs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact">
-                      <ArrowRight size={14} className="icon-inline text-primary" /> <strong>Contact Us</strong> (/contact) - Direct support & help desk
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/feedback">
-                      <ArrowRight size={14} className="icon-inline text-primary" /> <strong>Student Feedback</strong> (/feedback) - Ratings & reviews
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <p className="sitemap-subtitle">
+            A comprehensive architectural index of all modules built with BudgetBasics for the Aptech
+            TechViz competition. Click any module card to smoothly navigate to its interface.
+          </p>
         </div>
-      </section>
-    </>
+
+        {sections.map((section) => {
+          const SectionIcon = section.icon;
+
+          return (
+            <div className="sitemap-group" key={section.title}>
+              <h3 className="sitemap-group-title">
+                <SectionIcon size={18} className="icon-inline text-primary" /> {section.title}
+              </h3>
+
+              <div className="module-grid">
+                {section.modules.map((mod) => {
+                  const ModIcon = mod.icon;
+
+                  return (
+                    <Link to={mod.path} className="module-card" key={mod.path}>
+                      <div className="module-card-top">
+                        <div className="module-icon-wrap">
+                          <ModIcon size={20} />
+                        </div>
+
+                        <span className={`module-badge ${mod.badgeClass}`}>
+                          {mod.badge}
+                        </span>
+                      </div>
+
+                      <h4 className="module-title">{mod.title}</h4>
+
+                      <p className="module-desc">{mod.desc}</p>
+
+                      <span className="open-module-link">
+                        Explore Module <ArrowRight size={14} className="icon-inline" />
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

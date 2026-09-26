@@ -289,6 +289,7 @@ const HomePage = () => {
       </section>
 
       <Budget503020Module />
+
     </>
   );
 };

@@ -243,7 +243,7 @@ const ExpensePlannerModule = () => {
 
             <div className="planner-table-card border-only">
               <div className="table-header-flex">
-                <h3>📋 Logged Expenses ({expenses.length})</h3>
+                <h3>Logged Expenses ({expenses.length})</h3>
 
                 {expenses.length > 0 && (
                   <button className="btn-clear-all" onClick={handleClearAll}>

@@ -201,7 +201,7 @@ const InfographicsGallery = ({ selectedCategory, setSelectedCategory }) => {
 
                   <div className="modal-disclaimer">
                     <p>
-                      💡 Tip: You can save or screenshot this visual guide for
+                      Tip: You can save or screenshot this visual guide for
                       quick reference during your monthly budgeting!
                     </p>
                   </div>

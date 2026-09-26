@@ -39,12 +39,19 @@ const Budget503020Module = () => {
 
   return (
     <>
+    {location.pathname == "/50-30-20-rule" ?
+    (
       <PageHeroBanner
         title="50-30-20 Rule Budget Calculator"
         subtitle="Divide your monthly allowance into 50% Needs, 30% Wants, and 20% Savings in Pakistani Rupees (Rs.)."
         badge="Calculator Tool"
         bgImage={banner503020Img}
       />
+    )  
+    :
+    ""
+  }
+      
 
       <section id="budget-503020" className="module-section bg-light">
         <div className="container">
