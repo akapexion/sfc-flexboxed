@@ -175,7 +175,6 @@ const Header = () => {
         <div className="container ticker-container">
           <span className="ticker-label">Tip</span>
 
-          {/* yes, the actual marquee tag - deprecated but still works everywhere */}
           <marquee className="ticker-text" behavior="scroll" direction="left" scrollAmount="5">
             {budgetData.tickerTips.join("     •     ")}
           </marquee>

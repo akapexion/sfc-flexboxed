@@ -96,7 +96,6 @@ html {
 }
 
 body {
-  font-family: var(--font-main);
   background-color: var(--bg-primary);
   color: var(--text-main);
   line-height: 1.6;
