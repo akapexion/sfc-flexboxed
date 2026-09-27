@@ -64,7 +64,7 @@ const Header = () => {
   const navRef = useRef(null);
 
   const [now, setNow] = useState(new Date());
-  const [visitorCount, setVisitorCount] = useState(1042);
+  const [visitorCount, setVisitorCount] = useState("");
   const [fontScale, setFontScale] = useState(100);
   const [openGroup, setOpenGroup] = useState(null); 
 
