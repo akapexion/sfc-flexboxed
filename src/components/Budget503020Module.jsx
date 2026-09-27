@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, Shield, Sparkles, PiggyBank, PieChart, AlertCircle, Settings } from 'lucide-react';
+import { AlertCircle, Settings } from 'lucide-react';
 import PageHeroBanner from './PageHeroBanner';
 import banner503020Img from '../assets/banner_503020.jpg';
 

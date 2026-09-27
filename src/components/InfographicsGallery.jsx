@@ -145,7 +145,6 @@ const InfographicsGallery = ({ selectedCategory, setSelectedCategory }) => {
             </div>
           )}
 
-          {/* Modal Preview */}
           {activeModalItem && (
             <div
               className="modal-overlay"

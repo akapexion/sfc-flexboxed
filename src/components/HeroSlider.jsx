@@ -38,7 +38,6 @@ const HeroSlider = () => {
           className="hero-slider-track"
           style={{ transform: `translateX(-${currentSlide * 50}%)` }}
         >
-          {/* Slide 1 */}
           <div className="hero-slide-cell">
             <div
               className="hero-slide-bg"
@@ -80,7 +79,6 @@ const HeroSlider = () => {
             </div>
           </div>
 
-          {/* Slide 2 */}
           <div className="hero-slide-cell">
             <div
               className="hero-slide-bg"
@@ -125,7 +123,6 @@ const HeroSlider = () => {
           </div>
         </div>
 
-        {/* Navigation Buttons */}
         <button
           className="slider-nav-btn prev-btn"
           onClick={prevSlide}
@@ -142,7 +139,6 @@ const HeroSlider = () => {
           <ChevronRight size={24} />
         </button>
 
-        {/* Pagination Dots */}
         <div className="slider-dots-container">
           <button
             className={`slider-dot ${currentSlide === 0 ? 'active' : ''}`}

@@ -169,7 +169,6 @@ const HomePage = () => {
     }
   ];
 
-  // Filter modules according to search query and selected category tag
   let filteredModules = modulesList.filter((mod) => {
     const matchesSearch =
       !searchQuery ||
@@ -232,7 +231,6 @@ const HomePage = () => {
                 <div key={mod.id} className="module-flip-card">
                   <div className="module-flip-inner">
 
-                    {/* Front Side */}
                     <div className="module-flip-front">
                       <div className="card-top-content">
                         <div className="card-nav-icon">{mod.icon}</div>
@@ -241,7 +239,6 @@ const HomePage = () => {
                       </div>
                     </div>
 
-                    {/* Back Side */}
                     <div className="module-flip-back">
                       <div className="card-back-content">
                         <h4 className="card-back-title">{mod.title} Features</h4>

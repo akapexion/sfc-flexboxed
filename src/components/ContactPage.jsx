@@ -130,7 +130,6 @@ const ContactPage = () => {
 
           <div className="contact-page-grid">
 
-            {/* Contact Details */}
             <div className="contact-details-card border-only">
 
               <h3>Get In Touch</h3>
@@ -141,7 +140,6 @@ const ContactPage = () => {
 
               <div className="contact-info-list">
 
-                {/* Email */}
                 <div className="contact-info-item">
 
                   <div className="contact-icon-box">
@@ -165,7 +163,6 @@ const ContactPage = () => {
 
                 </div>
 
-                {/* Phone */}
                 <div className="contact-info-item">
 
                   <div className="contact-icon-box">
@@ -189,7 +186,6 @@ const ContactPage = () => {
 
                 </div>
 
-                {/* Social Media */}
                 <div className="contact-info-item">
 
                   <div className="contact-icon-box">
@@ -213,7 +209,6 @@ const ContactPage = () => {
 
                 </div>
 
-                {/* Location */}
                 <div className="contact-info-item">
 
                   <div className="contact-icon-box">
@@ -238,7 +233,6 @@ const ContactPage = () => {
 
             </div>
 
-            {/* Contact Form */}
             <div className="form-card border-only">
 
               <h3>Send Us a Message</h3>
@@ -282,7 +276,6 @@ const ContactPage = () => {
                   noValidate
                 >
 
-                  {/* Name */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -316,7 +309,6 @@ const ContactPage = () => {
 
                   </div>
 
-                  {/* Email */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -349,7 +341,6 @@ const ContactPage = () => {
 
                   </div>
 
-                  {/* Subject */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -381,7 +372,6 @@ const ContactPage = () => {
 
                   </div>
 
-                  {/* Message */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -417,7 +407,6 @@ const ContactPage = () => {
 
                   </div>
 
-                  {/* Submit */}
                   <button
                     type="submit"
                     className="btn btn-primary btn-full"

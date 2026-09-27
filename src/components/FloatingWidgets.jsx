@@ -90,7 +90,6 @@ const FloatingWidgets = () => {
 
   return (
     <div className="floating-widgets-wrapper">
-      {/* Bottom Left: Scroll to Top Button */}
       {showScrollTop && (
         <div className="floating-left-container">
           <button
@@ -104,9 +103,7 @@ const FloatingWidgets = () => {
         </div>
       )}
 
-      {/* Bottom Right: Floating AI Chatbot Container */}
       <div className="floating-right-container">
-        {/* Docked Chatbot Window */}
         {isChatOpen && (
           <div className="floating-chatbot-window">
             <div className="chatbot-widget-header">
@@ -187,7 +184,6 @@ const FloatingWidgets = () => {
           </div>
         )}
 
-        {/* Floating Chatbot Action Button (Bottom Right) */}
         <button
           className={`floating-action-btn chatbot-toggle-btn ${isChatOpen ? 'active' : ''}`}
           onClick={() => setIsChatOpen((prev) => !prev)}

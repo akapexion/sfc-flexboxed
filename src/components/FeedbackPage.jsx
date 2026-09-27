@@ -130,7 +130,6 @@ const FeedbackPage = () => {
         <div className="container">
           <div className="feedback-page-grid">
 
-            {/* Feedback Form */}
             <div className="form-card border-only">
 
               <h3>Submit Your Feedback</h3>
@@ -171,7 +170,6 @@ const FeedbackPage = () => {
                   noValidate
                 >
 
-                  {/* Name */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -201,7 +199,6 @@ const FeedbackPage = () => {
 
                   </div>
 
-                  {/* Email */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -230,7 +227,6 @@ const FeedbackPage = () => {
 
                   </div>
 
-                  {/* Category */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -266,7 +262,6 @@ const FeedbackPage = () => {
 
                   </div>
 
-                  {/* Rating */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -296,7 +291,6 @@ const FeedbackPage = () => {
 
                   </div>
 
-                  {/* Comments */}
                   <div className="form-group">
 
                     <label className="form-label">
@@ -328,7 +322,6 @@ const FeedbackPage = () => {
 
                   </div>
 
-                  {/* Submit */}
                   <button
                     type="submit"
                     className="btn btn-primary btn-full"
@@ -342,7 +335,6 @@ const FeedbackPage = () => {
 
             </div>
 
-            {/* Recent Feedback */}
             <div className="feedback-reviews-card border-only">
 
               <h3>What Students Say</h3>

@@ -116,7 +116,7 @@ const BudgetBasicsModule = ({ searchQuery, selectedCategory }) => {
                 </thead>
                 <tbody>
                   {budgetData.sampleStudentBudget.items.map((item, index) => {
-                    const rupeeAmount = item.amount * 30; // Scale to realistic Rupees
+                    const rupeeAmount = item.amount * 30; 
                     const percentage = ((item.amount / budgetData.sampleStudentBudget.totalIncome) * 100).toFixed(1);
                     return (
                       <tr key={index}>
