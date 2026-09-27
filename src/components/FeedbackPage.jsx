@@ -40,10 +40,8 @@ const FeedbackPage = () => {
 
   const [recentFeedbacks, setRecentFeedbacks] = useState([]);
 
-  // Name: letters, spaces, hyphen and apostrophe
   const namePattern = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
 
-  // Email pattern
   const emailPattern =
     /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
@@ -56,7 +54,6 @@ const FeedbackPage = () => {
     const trimmedEmail = fbEmail.trim();
     const trimmedComments = fbComments.trim();
 
-    // Name validation
     if (!trimmedName) {
       errors.name = 'Name is required.';
     } else if (trimmedName.length < 2) {
@@ -67,7 +64,6 @@ const FeedbackPage = () => {
       errors.name = 'Name can only contain letters, spaces, hyphens and apostrophes.';
     }
 
-    // Email validation
     if (!trimmedEmail) {
       errors.email = 'Email is required.';
     } else if (trimmedEmail.length > 100) {
@@ -76,7 +72,6 @@ const FeedbackPage = () => {
       errors.email = 'Please enter a valid email address.';
     }
 
-    // Comments validation
     if (!trimmedComments) {
       errors.comments = 'Comments are required.';
     } else if (trimmedComments.length < 10) {
@@ -103,7 +98,6 @@ const FeedbackPage = () => {
 
       toast.success('Thank you! Feedback submitted successfully.');
 
-      // Reset form
       setFbName('');
       setFbEmail('');
       setFbRating('5');

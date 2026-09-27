@@ -100,7 +100,7 @@ const HeroSlider = () => {
               </h1>
 
               <p className="hero-slide-subtitle">
-                Allocate 50% to Needs, 30% to Wants, and 20% to Savings. Log daily student purchases in Pakistani Rupees (Rs.) and stay on top of your financial goals with real-time balance updates!
+                Allocate 50% to Needs, 30% to Wants, and 20% to Savings. Log daily student purchases in Pakistani Rupees (Rs.) and stay on top of your financial goals with real-time balance updates.
               </p>
 
               <div className="hero-cta-buttons">

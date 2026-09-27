@@ -24,14 +24,11 @@ const ContactPage = () => {
   const [contactErrors, setContactErrors] = useState({});
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
-  // Name validation
   const namePattern = /^[A-Za-zÀ-ÿ\s'-]{2,50}$/;
 
-  // Email validation
   const emailPattern =
     /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
-  // Subject validation
   const subjectPattern =
     /^[A-Za-z0-9À-ÿ\s.,!?'"()&:/_-]{3,100}$/;
 
@@ -45,7 +42,6 @@ const ContactPage = () => {
     const trimmedSubject = subject.trim();
     const trimmedMessage = contactMessage.trim();
 
-    // Name
     if (!trimmedName) {
       errors.name = 'Name is required.';
     } else if (trimmedName.length < 2) {
@@ -57,7 +53,6 @@ const ContactPage = () => {
         'Name can only contain letters, spaces, hyphens and apostrophes.';
     }
 
-    // Email
     if (!trimmedEmail) {
       errors.email = 'Email is required.';
     } else if (trimmedEmail.length > 100) {
@@ -66,7 +61,6 @@ const ContactPage = () => {
       errors.email = 'Please enter a valid email address.';
     }
 
-    // Subject
     if (trimmedSubject) {
       if (trimmedSubject.length < 3) {
         errors.subject =
@@ -80,7 +74,6 @@ const ContactPage = () => {
       }
     }
 
-    // Message
     if (!trimmedMessage) {
       errors.message = 'Message is required.';
     } else if (trimmedMessage.length < 10) {
@@ -100,7 +93,6 @@ const ContactPage = () => {
         '✉️ Contact message sent successfully!'
       );
 
-      // Reset form
       setContactName('');
       setContactEmail('');
       setSubject('');

@@ -31,13 +31,11 @@ const InfographicsGallery = ({ selectedCategory, setSelectedCategory }) => {
   const searchQuery = useSelector((state) => state.budget.searchQuery);
 
   const filteredInfographics = budgetData.infographicsData.filter((item) => {
-    // Category filter
     const matchesCategory =
       !selectedCategory ||
       selectedCategory === 'All' ||
       item.category.toLowerCase() === selectedCategory.toLowerCase();
 
-    // Search query filter
     const matchesSearch =
       !searchQuery ||
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

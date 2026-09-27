@@ -186,7 +186,6 @@ const HomePage = () => {
     return matchesSearch && matchesCategory;
   });
 
-  // Sort modules
   if (sortBy === 'a-z') {
     filteredModules.sort((a, b) => a.title.localeCompare(b.title));
   } else if (sortBy === 'topic') {

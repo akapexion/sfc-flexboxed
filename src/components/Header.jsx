@@ -3,16 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../redux/budgetSlice";
 import toast from "react-hot-toast";
-import {
-  Map,
-  Sun,
-  Moon,
-  ChevronDown,
-  BookOpen,
-  ClipboardList,
-  Search,
-  MessageSquare
-} from "lucide-react";
+import { Map, Sun, Moon, ChevronDown } from "lucide-react";
 import budgetData from "../data/budgetData.json";
 import siteLogo from "../assets/logo2.png";
 
@@ -23,7 +14,7 @@ const navGroups = [
     items: [
       { label: "Budgeting Basics", path: "/basics" },
       { label: "Needs vs Wants", path: "/needs-wants" },
-    ]
+    ],
   },
   {
     key: "practice",
@@ -31,16 +22,16 @@ const navGroups = [
     items: [
       { label: "Savings Goals", path: "/savings-goals" },
       { label: "Expense Planner", path: "/expense-planner" },
-      { label: "Money Mistakes", path: "/money-mistakes" }
-    ]
+      { label: "Money Mistakes", path: "/money-mistakes" },
+    ],
   },
   {
     key: "explore",
     label: "Explore Resources",
     items: [
       { label: "Infographics & Learning Gallery", path: "/infographics" },
-      { label: "About Us", path: "/about" }
-    ]
+      { label: "About Us", path: "/about" },
+    ],
   },
   {
     key: "help",
@@ -48,9 +39,9 @@ const navGroups = [
     items: [
       { label: "AI Q&A Assistant", path: "/chatbot" },
       { label: "Contact us", path: "/contact" },
-      { label: "Give a Feedback", path: "/feedback" }
-    ]
-  }
+      { label: "Give a Feedback", path: "/feedback" },
+    ],
+  },
 ];
 
 const MIN_FONT_SCALE = 80;
@@ -66,7 +57,8 @@ const Header = () => {
   const [now, setNow] = useState(new Date());
   const [visitorCount, setVisitorCount] = useState("");
   const [fontScale, setFontScale] = useState(100);
-  const [openGroup, setOpenGroup] = useState(null); 
+  const [openGroup, setOpenGroup] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 1000);
@@ -103,17 +95,14 @@ const Header = () => {
     };
   }, []);
 
-  // push the font scale onto the root element so it affects the whole app
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontScale}%`;
   }, [fontScale]);
 
-  // close whichever dropdown is open when the route changes
   useEffect(() => {
     setOpenGroup(null);
   }, [location]);
 
-  // close on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (navRef.current && !navRef.current.contains(e.target)) {
@@ -126,31 +115,37 @@ const Header = () => {
 
   const handleThemeToggle = () => {
     dispatch(toggleDarkMode());
-    toast.success(darkMode ? "Switched to Light Mode" : "Switched to Dark Mode", {
-      duration: 2000
-    });
+    toast.success(
+      darkMode ? "Switched to Light Mode" : "Switched to Dark Mode",
+      {
+        duration: 2000,
+      },
+    );
   };
 
-  const decreaseFont = () => setFontScale((s) => Math.max(MIN_FONT_SCALE, s - FONT_STEP));
-  const increaseFont = () => setFontScale((s) => Math.min(MAX_FONT_SCALE, s + FONT_STEP));
+  const decreaseFont = () =>
+    setFontScale((s) => Math.max(MIN_FONT_SCALE, s - FONT_STEP));
+  const increaseFont = () =>
+    setFontScale((s) => Math.min(MAX_FONT_SCALE, s + FONT_STEP));
 
   const toggleGroup = (key) => {
     setOpenGroup((prev) => (prev === key ? null : key));
   };
 
-  const isGroupActive = (group) => group.items.some((item) => item.path === location.pathname);
+  const isGroupActive = (group) =>
+    group.items.some((item) => item.path === location.pathname);
 
   const dateStr = now.toLocaleDateString("en-US", {
     weekday: "short",
     year: "numeric",
     month: "short",
-    day: "numeric"
+    day: "numeric",
   });
 
   const timeStr = now.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
-    second: "2-digit"
+    second: "2-digit",
   });
 
   return (
@@ -164,7 +159,11 @@ const Header = () => {
           </div>
 
           <div className="top-actions">
-            <Link to="/sitemap" className="btn-sitemap-link" title="View Website Sitemap">
+            <Link
+              to="/sitemap"
+              className="btn-sitemap-link"
+              title="View Website Sitemap"
+            >
               <Map size={14} className="icon-inline" /> Sitemap
             </Link>
           </div>
@@ -172,23 +171,39 @@ const Header = () => {
       </div>
 
       <div className="tips-ticker-bar">
-        <div className="container ticker-container">
-          <span className="ticker-label">Tip</span>
+  <div className="container ticker-container">
+    <span className="ticker-label">Tip</span>
 
-          <marquee className="ticker-text" behavior="scroll" direction="left" scrollAmount="5">
-            {budgetData.tickerTips.join("     •     ")}
-          </marquee>
-        </div>
+    <div className="ticker-wrapper">
+      <div className="ticker-track">
+        <span className="ticker-text">
+          {budgetData.tickerTips.join("     •     ")}
+        </span>
       </div>
+    </div>
+  </div>
+</div>
+
 
       <div className="main-nav-bar">
         <div className="container nav-container">
           <Link to="/" className="brand-box" title="BudgetBasics Home">
-            <img src={siteLogo} alt="BudgetBasics Logo" className="header-site-logo" />
+            <img
+              src={siteLogo}
+              alt="BudgetBasics Logo"
+              className="header-site-logo"
+            />
           </Link>
 
-          <nav className="nav-links" ref={navRef}>
-            <Link to="/" className={`nav-btn ${location.pathname === "/" ? "active" : ""}`}>
+          {/* Desktop / Tablet Navigation */}
+          <nav
+            className={`nav-links ${mobileMenuOpen ? "mobile-open" : ""}`}
+            ref={navRef}
+          >
+            <Link
+              to="/"
+              className={`nav-btn ${location.pathname === "/" ? "active" : ""}`}
+            >
               Home
             </Link>
 
@@ -205,13 +220,21 @@ const Header = () => {
                     aria-expanded={isOpen}
                   >
                     {group.label}
-                    <ChevronDown size={14} className={`dropdown-arrow ${isOpen ? "open" : ""}`} />
+
+                    <ChevronDown
+                      size={14}
+                      className={`dropdown-arrow ${isOpen ? "open" : ""}`}
+                    />
                   </button>
 
                   {isOpen && (
                     <div className="dropdown-menu">
                       {group.items.map((item) => (
-                        <Link key={item.path} to={item.path} className="dropdown-item">
+                        <Link
+                          key={item.path}
+                          to={item.path}
+                          className="dropdown-item"
+                        >
                           {item.label}
                         </Link>
                       ))}
@@ -230,6 +253,32 @@ const Header = () => {
               {darkMode ? <Sun size={16} /> : <Moon size={16} />}
             </button>
           </nav>
+
+          {/* Mobile controls */}
+          <div className="mobile-nav-actions">
+            <button
+              className="theme-toggle-icon-btn mobile-theme-btn"
+              onClick={handleThemeToggle}
+              title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              aria-label="Toggle Theme"
+            >
+              {darkMode ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
+
+            <button
+              className={`mobile-menu-btn ${mobileMenuOpen ? "open" : ""}`}
+              onClick={() => {
+                setMobileMenuOpen((prev) => !prev);
+                setOpenGroup(null);
+              }}
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
